@@ -1,5 +1,9 @@
 package extra_2_guia9;
 
+import entidades.Ahorcado;
+import java.util.Arrays;
+import servicio.AhorcadoServicio;
+
 
 public class Extra_2_Guia9 {
 
@@ -48,7 +52,21 @@ public class Extra_2_Guia9 {
          * Longitud de la palabra: 6 Mensaje: La letra no pertenece a la palabra
          * Mensaje: Lo sentimos, no hay más oportunidades
          */
+        AhorcadoServicio service = new AhorcadoServicio();
+        Ahorcado juego1 = service.crearJuego();
+        char[] palabra = new char[juego1.getPalabra().length];
+        Arrays.fill(palabra, '*');
+
+        do {
+            service.juego(juego1, palabra);
+        } while (juego1.getJugadasMax() != 0 && juego1.getLetrasEncontradas() != juego1.getLongitud());
+
+        if (juego1.getJugadasMax() == 0){
+            System.out.println("Perdiste");
+        }
+        if (juego1.getLetrasEncontradas() == juego1.getLongitud()){
+            System.out.println("Ganaste");
+        }
 
     }
-
 }

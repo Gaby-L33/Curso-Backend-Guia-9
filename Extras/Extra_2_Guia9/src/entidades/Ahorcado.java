@@ -1,14 +1,69 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+         * Crear una clase Ahorcado (como el juego), la cual
+         * deberá contener como atributos, un vector con la palabra a buscar, la
+         * cantidad de letras encontradas y la cantidad jugadas máximas que
+         * puede realizar el usuario.
+*/
 package entidades;
 
-/**
- *
- * @author Usuario
- */
+import java.util.Arrays;
+
 public class Ahorcado {
-    
+    private int longitud;
+    private char[] palabra = new char[longitud];
+    private int letrasEncontradas;
+    private int jugadasMax;
+
+    public Ahorcado() {
+    }
+
+    public Ahorcado(int longitud, char[] palabra, int letrasEncontradas, int jugadasMax) {
+        this.longitud = longitud;
+        this.palabra = palabra;
+        this.letrasEncontradas = letrasEncontradas;
+        this.jugadasMax = jugadasMax;
+    }
+
+    public int getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(int longitud) {
+        this.longitud = longitud;
+    }
+
+    public char[] getPalabra() {
+        return palabra;
+    }
+
+    public void setPalabra(char[] palabra) {
+        this.palabra = palabra;
+    }
+
+    public int getLetrasEncontradas() {
+        return letrasEncontradas;
+    }
+
+    public void setLetrasEncontradas(int letrasEncontradas) {
+        this.letrasEncontradas = letrasEncontradas;
+    }
+
+    public int getJugadasMax() {
+        return jugadasMax;
+    }
+
+    public void setJugadasMax(int jugadasMax) {
+        this.jugadasMax = jugadasMax;
+    }
+
+    @Override
+    public String toString() {
+        return "Ahorcado{" +
+                "longitud=" + longitud +
+                ", palabra=" + Arrays.toString(palabra) +
+                ", letrasEncontradas=" + letrasEncontradas +
+                ", jugadasMax=" + jugadasMax +
+                '}';
+    }
 }
+

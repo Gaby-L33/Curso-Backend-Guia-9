@@ -1,6 +1,3 @@
-package entidades;
-
-public class Cadena {
     /**
      * Realizar una clase llamada Cadena, en el paquete de entidades, que tenga
      * como atributos una frase (String) y su longitud. Agregar constructor
@@ -8,25 +5,28 @@ public class Cadena {
      * constructor con frase como atributo debe setear la longitud de la frase
      * de manera automática
      */
+package entidades;
+
+public class Cadena {
     
-    private String frace;
+    private String frase;
     private int longitud;
 
     public Cadena() {
     }
 
-    public Cadena(String frace) {
-        this.frace = frace;
-        this.longitud = frace.length();
+    public Cadena(String frase) {
+        this.frase = frase;
+        this.longitud = frase.length();
     }
 
-    public String getFrace() {
-        return frace;
+    public String getFrase() {
+        return frase;
     }
 
-    public void setFrace(String frace) {
-        this.frace = frace;
-        this.longitud = frace.length();
+    public void setFrase(String frase) {
+        this.frase = frase;
+        this.longitud = frase.length();
     }
 
     public int getLongitud() {
@@ -39,7 +39,7 @@ public class Cadena {
 
     @Override
     public String toString() {
-        return "Cadena{" + "frace=" + frace + ", longitud=" + longitud + '}';
+        return "Cadena{" + "frace=" + frase + ", longitud=" + longitud + '}';
     }
 
 }

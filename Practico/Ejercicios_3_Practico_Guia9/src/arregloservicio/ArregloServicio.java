@@ -3,13 +3,14 @@ package arregloservicio;
 import java.util.Arrays;
 
 public class ArregloServicio {
+
     public void inicializarA(double[] A) {
         /**
          * Método inicializarA recibe un arreglo por parámetro y lo inicializa
          * con números aleatorios.
          */
         for (int i = 0; i < A.length; i++) {
-            int numeroAleatorio = (int) (Math.random() * 10);
+            double numeroAleatorio = (double) (Math.random() * 10);
             A[i] = numeroAleatorio;
         }
     }
@@ -19,9 +20,7 @@ public class ArregloServicio {
          * Método mostrar recibe un arreglo por parámetro y lo muestra por
          * pantalla.
          */
-        for (int i = 0; i < A.length; i++) {
-            System.out.println(A[i]);
-        }
+        System.out.println(Arrays.toString(A));
     }
 
     public void ordenar(double[] A) {
@@ -32,7 +31,7 @@ public class ArregloServicio {
         Arrays.sort(A);
     }
 
-    public void inicializarB(double[] A,double[] B) {
+    public void inicializarB(double[] A, double[] B) {
         /**
          * Método inicializarB copia los primeros 10 números del arreglo A en el
          * arreglo B. Luego llenar las últimas 10 posiciones del arreglo B con

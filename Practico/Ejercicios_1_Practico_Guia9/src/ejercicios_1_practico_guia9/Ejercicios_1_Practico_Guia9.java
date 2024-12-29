@@ -1,10 +1,3 @@
-package ejercicios_1_practico_guia9;
-
-import cadenaservicio.CadenaServicio;
-
-public class Ejercicios_1_Practico_Guia9 {
-
-    public static void main(String[] args) {
         /**
          * Realizar una clase llamada Cadena, en el paquete de entidades, que
          * tenga como atributos una frase (String) y su longitud. Agregar
@@ -32,6 +25,13 @@ public class Ejercicios_1_Practico_Guia9 {
          * y falso si no.
          *
          */
+package ejercicios_1_practico_guia9;
+
+import cadenaservicio.CadenaServicio;
+
+public class Ejercicios_1_Practico_Guia9 {
+
+    public static void main(String[] args) {
         
         CadenaServicio m1 = new CadenaServicio();
         //Cadena l1 = Cadena();

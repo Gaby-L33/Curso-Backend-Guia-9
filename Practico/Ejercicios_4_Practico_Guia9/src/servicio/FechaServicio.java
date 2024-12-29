@@ -4,7 +4,8 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class FechaServicio {
- Scanner leer = new Scanner(System.in);
+
+    Scanner leer = new Scanner(System.in);
 
     public Date fechaNacimiento() {
         /**
@@ -13,7 +14,6 @@ public class FechaServicio {
          * método debe retornar el objeto Date. Ejemplo fecha: Date fecha = new
          * Date(anio, mes, dia);
          */
-
         System.out.println("Ingrese el AÑO de nacimiento : ");
         int anio = leer.nextInt();
         System.out.println("Ingrese el MES de nacimiento : ");

@@ -1,9 +1,16 @@
-package messecreto;
+package Servicios;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class MesSecreto {
+
+    /*
+    * Crea una clase en Java donde declares una variable de tipo array de
+    * Strings que contenga los doce meses del año, en minúsculas. A
+    * continuación, declara una variable mesSecreto de tipo String, y hazla
+    * igual a un elemento del array (por ejemplo, mesSecreto = mes[9].
+     */
     Random rand = new Random();
     Scanner leer = new Scanner(System.in);
     String[] mesesSecreto = new String[12];
@@ -25,22 +32,26 @@ public class MesSecreto {
         mesSecreto = mesesSecreto[rand.nextInt(12)];
         //System.out.println("el mes secreto es : " + mesSecreto);
     }
-    
-    
-    public void juegoMesSecreto(){
+
+    public void juegoMesSecreto() {
+        /*
+        + El programa debe pedir al usuario que adivine el mes secreto. Si el
+        * usuario acierta mostrar un mensaje, y si no lo hace, pedir que vuelva
+        * a intentar adivinar el mes secreto.
+         */
         boolean acertado = false;
         System.out.println("BIENVENIDO a MES SECRETO");
         System.out.println("Adivine el mes en minuscula ejemplo : enero/octubre/ect");
-        do{
+        do {
             System.out.println("Adivine el mes : ");
             String prediccion = leer.nextLine();
-            if (prediccion.equals(mesSecreto)){
+            if (prediccion.equals(mesSecreto)) {
                 System.out.println("FELICITACIONES USTED ACERTO !");
                 acertado = true;
-            }else{
+            } else {
                 System.out.println("INCORRECTO vuelva a intentarlo");
-            } 
-        }while (!acertado);   
+            }
+        } while (!acertado);
     }
 
 }

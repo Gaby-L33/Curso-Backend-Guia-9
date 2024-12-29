@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class PersonaService {
-  
+
     Persona p = new Persona();
 
     public Persona crearPersona() {

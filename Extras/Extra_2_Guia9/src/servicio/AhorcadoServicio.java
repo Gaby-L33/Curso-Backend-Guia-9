@@ -67,6 +67,9 @@ que no esté, se le restará uno a sus oportunidades.*/
     }
 
     public void intentos(Ahorcado juego, char[] palabra) {
+        /*
+        Método intentos(): para mostrar cuántas oportunidades le queda al jugador.
+        */
         int encontradas = juego.getLetrasEncontradas();
         int restantes = juego.getLongitud() - juego.getLetrasEncontradas();
         System.out.println(Arrays.toString(palabra));
